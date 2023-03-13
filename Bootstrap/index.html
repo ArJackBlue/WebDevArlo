@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <title>Bootstrap 101</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="bg-black">
+
+    <!-- Example Code -->
+    <nav class="navbar navbar-expand-lg p-n8">
+        <div class="container-fluid d-flex flex-row justify-content-evenly">
+          <a class="navbar-brand px-5 py-3 align-items-end purple" href="../index.html">Bootstrap</a>
+         
+          <div class="collapse navbar-collapse d-inline-flex flex-row justify-content-evenly" >
+            <ul class="navbar-nav me-auto  mb-lg-0 justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#background">Background</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#borders">Borders</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#colors">Colors</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#display">Displays</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#flex">Flex</a>
+              </li>
+            </ul>
+           
+          </div>
+        </div>
+      </nav>
+    <br>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <div id="background " class="p-3 m-0 border bd-example">
+        <h2 class="text-success"> Background Colors</h2>
+        <div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
+        <div class="p-3 mb-2 bg-primary-subtle text-emphasis-primary">.bg-primary-subtle</div>
+        <div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div>
+        <div class="p-3 mb-2 bg-secondary-subtle text-emphasis-secondary">.bg-secondary-subtle</div>
+        <div class="p-3 mb-2 bg-success text-white">.bg-success</div>
+        <div class="p-3 mb-2 bg-success-subtle text-emphasis-success">.bg-success-subtle</div>
+        <div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
+        <div class="p-3 mb-2 bg-danger-subtle text-emphasis-danger">.bg-danger-subtle</div>
+        <div class="p-3 mb-2 bg-warning text-dark">.bg-warning</div>
+        <div class="p-3 mb-2 bg-warning-subtle text-emphasis-warning">.bg-warning-subtle</div>
+        <div class="p-3 mb-2 bg-info text-dark">.bg-info</div>
+        <div class="p-3 mb-2 bg-info-subtle text-emphasis-info">.bg-info-subtle</div>
+        <div class="p-3 mb-2 bg-light text-dark">.bg-light</div>
+        <div class="p-3 mb-2 bg-light-subtle text-emphasis-light">.bg-light-subtle</div>
+        <div class="p-3 mb-2 bg-dark text-white">.bg-dark</div>
+        <div class="p-3 mb-2 bg-dark-subtle text-emphasis-dark">.bg-dark-subtle</div>
+        <p class="p-3 mb-2 bg-body-secondary">.bg-body-secondary</p>
+        <p class="p-3 mb-2 bg-body-tertiary">.bg-body-tertiary</p>
+
+        <div class="p-3 mb-2 bg-body text-body">.bg-body</div>
+        <div class="p-3 mb-2 bg-black text-white">.bg-black</div>
+        <div class="p-3 mb-2 bg-white text-dark">.bg-white</div>
+        <div class="p-3 mb-2 bg-transparent bg-light text-body">.bg-transparent</div>
+
+        <p class="text-info-emphasis"> Gradients just need an added class of bg-gradient</p>
+    </div>
+    <br>
+    <div id="borders" class="text-white p-3 m-0 border bd-example">
+        <h2 class="text-success"> Borders </h2>
+        <h3 class="text-danger"> Additive Borders</h3>
+        <span class="border bg-transparent border-2"> a&nbsp;&nbsp;&nbsp;</span>
+        <span class="border-top bg-transparent border-2">&nbsp;&nbsp;&nbsp;b</span>
+        <span class="border-end bg-transparent border-2">&nbsp;&nbsp;&nbsp;c</span>
+        <span class="border-bottom bg-transparent border-2">&nbsp;&nbsp;&nbsp;d</span>
+        <span class="border-start bg-transparent  border-2">&nbsp;&nbsp;&nbsp;e</span>
+        <h3 class="text-danger"> Subtractive Borders</h3>
+        <span class="border border-0 border-2">&nbsp;</span>
+        <span class="border border-top-0 border-2">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span class="border border-end-0 border-2">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span class="border border-bottom-0 border-2">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span class="border border-start-0 border-2">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <h3 class="text-danger"> Color Borders</h3>
+        <span class="border border-primary bg-transparent border-2"> &nbsp;&nbsp;&nbsp;a</span>
+        <span class="border border-primary-subtle bg-transparent border-2">&nbsp;&nbsp;&nbsp;B </span>
+        <span class="border border-secondary bg-transparent border-2">C&nbsp;&nbsp;&nbsp; </span>
+        <span class="border border-secondary-subtle bg-transparent border-2">&nbsp;&nbsp;&nbsp;D</span>
+        <span class="border border-success bg-transparent border-2">E&nbsp;&nbsp;&nbsp; </span>
+        <span class="border border-success-subtle bg-transparent border-2">F &nbsp;&nbsp;&nbsp;</span>
+        <span class="border border-danger bg-transparent border-2">G&nbsp;&nbsp;&nbsp;</span>
+        <span class="border border-danger-subtle bg-transparent border-2">H&nbsp;&nbsp;&nbsp;</span>
+        <span class="border border-warning bg-transparent border-2">I&nbsp;&nbsp;&nbsp;</span>
+        <span class="border border-warning-subtle bg-transparent border-2">J&nbsp;&nbsp;&nbsp;</span>
+        <span class="border border-info bg-transparent border-2">K&nbsp;&nbsp;&nbsp;</span>
+        <span class="border border-info-subtle bg-transparent border-2">L&nbsp;&nbsp;&nbsp;</span>
+        <span class="border border-light bg-transparent border-2">M&nbsp;&nbsp;&nbsp;</span>
+        <span class="border border-light-subtle bg-transparent border-2">N&nbsp;&nbsp;&nbsp;</span>
+        <span class="border border-dark bg-transparent border-2">O&nbsp;&nbsp;&nbsp;</span>
+        <span class="border border-dark-subtle bg-transparent border-2">P&nbsp;&nbsp;&nbsp;</span>
+        <span class="border border-white bg-transparent border-2">Q&nbsp;&nbsp;&nbsp;</span>
+        <br>
+        <h3 class="text-danger"> Border Opacity</h3>
+        <div class="border border-success p-2 mb-2 text-white">This is default</div>
+        <div class="border border-success p-2 mb-2 border-opacity-75 text-white">This is 75% opacity</div>
+        <div class="border border-success p-2 mb-2 border-opacity-50 text-white">This is 50% opacity</div>
+        <div class="border border-success p-2 mb-2 border-opacity-25 text-white">This is 25% opacity</div>
+        <div class="border border-success p-2 border-opacity-10 text-white">This is 10% opacity</div>
+
+        <p class="text-info-emphasis"> You can change the opacity by using --bs-border-opacity in style tags, as well as
+            the weight of borders, theres sizes from 1-5
+            its hard to show on this page due to background color
+        </p>
+    </div>
+    <br>
+    <div id="colors" class="p-3 m-0 border-1 bd-example">
+        <h2 class="text-success"> Colors</h2>
+
+        <p class="text-primary">.text-primary</p>
+        <p class="text-primary-emphasis">.text-primary-emphasis</p>
+        <p class="text-secondary">.text-secondary</p>
+        <p class="text-secondary-emphasis">.text-secondary-emphasis</p>
+        <p class="text-success">.text-success</p>
+        <p class="text-success-emphasis">.text-success-emphasis</p>
+        <p class="text-danger">.text-danger</p>
+        <p class="text-danger-emphasis">.text-danger-emphasis</p>
+        <p class="text-warning bg-dark">.text-warning</p>
+        <p class="text-warning-emphasis">.text-warning-emphasis</p>
+        <p class="text-info bg-dark">.text-info</p>
+        <p class="text-info-emphasis">.text-info-emphasis</p>
+        <p class="text-light bg-dark">.text-light</p>
+        <p class="text-light-emphasis">.text-light-emphasis</p>
+        <p class="text-dark bg-white">.text-dark</p>
+        <p class="text-dark-emphasis">.text-dark-emphasis</p>
+        <p class="text-body">.text-body</p>
+        <p class="text-muted">.text-muted</p>
+
+        <p class="text-body-emphasis">.text-body-emphasis</p>
+        <p class="text-body-secondary">.text-body-secondary</p>
+        <p class="text-body-tertiary">.text-body-tertiary</p>
+
+        <p class="text-black bg-white">.text-black</p>
+        <p class="text-white bg-dark">.text-white</p>
+        <p class="text-black-50 bg-white">.text-black-50</p>
+        <p class="text-white-50 bg-dark">.text-white-50</p>
+        <h3 class="text-danger"> Text opacity</h3>
+        <div class="text-primary">This is default primary text</div>
+        <div class="text-primary text-opacity-75">This is 75% opacity primary text</div>
+        <div class="text-primary text-opacity-50">This is 50% opacity primary text</div>
+        <div class="text-primary text-opacity-25">This is 25% opacity primary text</div>
+    </div>
+    <br>
+    <div id="display" class="p-3 m-0 border">
+        <h2 class="text-success"> Displays</h2>
+        <p>To use do:
+
+            .d-{value}
+            .d-{breakpoint}-{value}
+            <br>
+            Where value is one of:
+        <ul>
+            <li> none</li>
+            <li> inline</li>
+            <li> inline-block</li>
+            <li> block</li>
+            <li> grid</li>
+            <li> table</li>
+            <li> table-cell</li>
+            <li> table-row</li>
+            <li> flex</li>
+            <li> inline-flex</li>
+        </ul>
+        <br>
+
+        <p>It has the standard breakpoints.
+        </p>
+        <div class="d-inline p-2 text-bg-primary">d-inline</div>
+        <div class="d-inline p-2 text-bg-dark">d-inline</div>
+        <br>
+        <br>
+        <span class="d-block p-2 text-bg-primary">d-block</span>
+        <span class="d-block p-2 text-bg-dark">d-block</span>
+        <br>
+        <span class="d-none d-sm-block d-md-none d-lg-block d-xl-none"> HELLO</span>
+        <br>
+        <p> You start on mobile first, and the larger your screen goes, the more you have to add to possibly change it.
+            <br>
+            You can hide things specifcally on print.
+        </p>
+    </div>
+    <br>
+    <div id="flex" class="border p-3">
+        <h2 class="text-success"> Flex</h2>
+        <p> To use do:
+        <ul>
+            <li> .d-flex</li>
+            <li>.d-inline-flex</li>
+        </ul>
+        </p>
+        <h3 class="text-danger"> Direction</h3>
+        <h5> Side to side</h5>
+        <p> Forwards: flex-row </p>
+        <div class="d-flex flex-row mb-3">
+            <div class="p-2">Flex item 1</div>
+            <div class="p-2">Flex item 2</div>
+            <div class="p-2">Flex item 3</div>
+        </div>
+        <br>
+        <p> Backward- flex-row-reverse</p>
+        <div class="d-flex flex-row-reverse">
+            <div class="p-2">Flex item 1</div>
+            <div class="p-2">Flex item 2</div>
+            <div class="p-2">Flex item 3</div>
+        </div>
+        <hr>
+        <h5> Up and Down</h5>
+        <p> Low-High</p>
+        <div class="d-flex flex-column mb-3">
+            <div class="p-2">Flex item 1</div>
+            <div class="p-2">Flex item 2</div>
+            <div class="p-2">Flex item 3</div>
+        </div>
+        <p> High-Low</p>
+        <div class="d-flex flex-column-reverse">
+            <div class="p-2">Flex item 1</div>
+            <div class="p-2">Flex item 2</div>
+            <div class="p-2">Flex item 3</div>
+        </div>
+        <h3 class="text-danger"> Variations</h3>
+        <ul>
+            <li>.flex-row</li>
+            <li>.flex-row-reverse</li>
+            <li> .flex-column</li>
+            <li>.flex-column-reverse</li>
+           
+        </ul>
+        <p> It has all the standard breakpoints for each one.</p>
+         </div>
+        <div id="justify" class="border p-3" >
+        <h3 class="text-danger"> Justify</h3>
+        <ul>
+            <li> justify-content-start</li>
+            <li> justify-content-end</li>
+            <li> justify-content-center</li>
+            <li> justify-content-between</li>
+            <li> justify-content-around</li>
+            <li> justify-content-evenly</li>
+        </ul>
+        <p> There are plenty of other justify variations, for small, medium, large, ect. screens. This is on the main
+            axis.</p>
+            <h3 class="text-danger"> Align </h3>
+            <ul>
+                <li>.align-items-start</li>
+                <li>.align-items-end</li>
+                <li>.align-items-center</li>
+                <li>.align-items-baseline</li>
+                <li>.align-items-stretch</li>
+            </ul>
+            <p> As well as all the standard breakpoints.</p>
+            <h3 class="text-danger"> Align Self</h3>
+            <ul>
+                <li>.align-self-start</li>
+                <li>.align-self-end</li>
+                <li>.align-self-center</li>
+                <li>.align-self-baseline</li>
+                <li>.align-self-stretch</li>
+            </ul>
+    </div>
+    <script> 
+    let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}</script>
+    <!-- End Example Code -->
+</body>
+
+</html>

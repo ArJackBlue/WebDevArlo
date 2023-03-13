@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        h3{
+            color: white;
+        }
+       .past-img{
+            color: black;
+        }
+        .box {
+          width: 300px;
+          height: 300px;
+          position: relative;
+          top: 30px;
+          left: 30px;
+        }
+        .second-box {
+          width: 50%;
+          height: 50%;
+          background-color: black;
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+        .box-select {
+          border: 1px solid black;
+          height: 20px;
+        }
+        .box-select:not(.dontselect) {
+          background-color: gray;
+          color: white;
+        }
+        .box-select:hover {
+          background-color: aquamarine;
+        }
+
+        .box-select:nth-child(4) {
+          background-color: yellow;
+          color: black;
+        }
+        .box2 {
+          width: 300px;
+          height: 300px;
+          border: 5px solid black;
+          margin: 50px auto;
+          position: relative;
+          background-color: black;
+        }
+        .box2::before {
+          content: " ";
+          display: block;
+          border: 10px solid red;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: -20px;
+          left: -20px;
+        }
+
+        .box2::after {
+          content: " ";
+          display: block;
+          border: 10px solid blue;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          bottom: -20px;
+          right: -20px;
+          z-index: -2;
+        }
+        .p::first-letter {
+          font-size: 35px;
+          float: left;
+          margin: 5px;
+        }
+        .p::first-line{
+          font-weight: bold;
+        }
+        a{
+          background-color: #FFF;
+          display: inline-block;
+          padding: 5px 15px;
+          color: #000;
+          text-decoration: none;
+          border: 1px solid black;
+          transition: background-color 0.3s,
+          color: 0.5s,
+          padding: 1s;
+        }
+         .button:hover{
+          background-color: black;
+          color:#fff;
+          padding: 10px 30px;
+         }
+         .gradient{
+          background: rgb(255,0,0);
+          background: linear-gradient(36deg, rgba(255,0,0,1) 0%, rgba(120,0,255,1) 66%, rgba(0,112,255,1) 100%);
+          height: 500px;
+      }
+      body, html{
+
+          height: 100%;
+                  padding:0;
+                  margin: 0;
+      }
+      body{
+                  background-image: linear-gradient( 180deg,
+                          rgba(0,0,0, 0.3) 0%,
+                              rgba(0,0,0, 0.8) 100% ),
+                      url("https://images.unsplash.com/photo-1517976487492-5750f3195933?ixlib=rb-1.21&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+                      background-repeat: no-repeat;
+      }
+      img{
+        width: 50%;
+        height: auto;
+      }
+      @media (max-width:640px){
+        img{
+            width:100%;
+        }
+      }
+      .container{
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 56.25%;
+
+      }
+      .container iframe{
+        position: absolute;
+        top: 0;
+         left:0;
+         bottom: 0;
+         right: 0;
+         width: 100%;
+         height: 100%
+      }
+      .box4{
+        width: 400px;
+        height:400px;
+        border: 5px solid black;
+        margin: 50px auto;
+        border-radius:0;
+      }
+      @media (max-width: 1000px) and (min-width: 700px){
+        .box4{
+            border-radius: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Pseudo Elements</h3>
+    <div id="parent">
+      <div class="box-select"></div>
+      <div class="box-select dontselect"></div>
+      <div class="box-select"></div>
+      <div class="box-select">Select Me</div>
+      <div class="box-select"></div>
+      <div class="box-select"></div>
+    </div>
+    <br />
+    <div class="box2"></div>
+    <br />
+    <p class="p">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quidem, quasi
+      in maiores quisquam eos alias, tenetur odio aperiam eaque neque totam?
+      Nisi adipisci incidunt sapiente alias nemo iure at? Lorem ipsum dolor sit
+      amet consectetur adipisicing elit. Deserunt placeat reiciendis doloremque
+      laboriosam odio fuga dolorum repellendus, laudantium obcaecati vero
+      sapiente omnis numquam iusto perferendis. Ipsam tempora veniam ipsum
+      possimus! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio
+      aliquam molestiae error, voluptatum numquam temporibus sint consequatur ut
+      magnam aut ipsa? Temporibus facere pariatur modi aut porro, fugiat maiores
+      nesciunt! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae
+      adipisci nemo repellat eveniet? Ut voluptate ipsum id facere earum
+      ratione, dolore repudiandae quo dolorem, necessitatibus sed error
+      aspernatur voluptas quidem? Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Asperiores quidem ab quisquam, commodi optio molestiae
+      nulla. Neque, soluta, dolor debitis quo minus ipsam beatae dolores quam
+      reiciendis repellat, quibusdam blanditiis.
+    </p>
+    <hr />
+    <h3>Transitions+ Backgrounds</h3>
+    <a href="#" class="button"> Click Me</a>
+    <br />
+    <br />
+    <div class="gradient"></div>
+
+    <br />
+    <br />
+    <div class="gradient-img">
+      <a
+        href="https://images.unsplash.com/photo-1517976487492-5750f3195933?ixlib=rb-1.21&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+      >
+        Unsplash img
+      </a>
+    </div>
+    <hr />
+    <h3 class="past-img">Responsive Stuff- Needed Reminders!</h3>
+    <br />
+    <img
+      src="https://images.unsplash.com/flagged/photo-1572392640988-ba48d1a74457?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
+      alt=" unsplash painting"
+    />
+    <br />
+    <a
+      href="https://images.unsplash.com/flagged/photo-1572392640988-ba48d1a74457?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
+    >
+      Unsplash img
+    </a>
+    <br />
+    <br />
+    <div class="container">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/2jv1CF3iJkw"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <div class="box4">
+
+    </div>
+    <hr>
+    <h3> END OF HTML AND CSS</h3>
+  </body>
+</html>
