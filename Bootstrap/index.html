@@ -14,39 +14,48 @@
 <body class="bg-black">
 
   <!-- Example Code -->
-  <header class=" sticky-top">
-  <nav class="navbar navbar-expand-lg p-n8">
-    <div class="container-fluid sticky-top">
-      <a class="navbar-brand px-5 py-3 align-items-end purple" href="../index.html" alt="Back to Homepage">Bootstrap</a>
-
-      <div class="collapse navbar-collapse d-flex justify-content-between">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#background">Background</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#borders">Borders</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#colors">Colors</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#display">Displays</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#flex">Flex</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#float">Float</a>
-          </li>
-          <li class="nav-item">
-            <a href="#interaction" class="nav-link text-white"> Interactions</a>
-          </li>
-        </ul>
+    <nav class="navbar navbar-expand-lg p-n8">
+      <div class="container-fluid sticky-top">
+        <div class="collapse navbar-collapse d-flex justify-content-between container row gx-5">
+          <ul class="navbar-nav">
+            <li class="nav-item col">
+              <a class="nav-link text-white" href="#background">Background</a>
+            </li>
+            <li class="nav-item col">
+              <a class="nav-link text-white" href="#borders">Borders</a>
+            </li>
+            <li class="nav-item col">
+              <a class="nav-link text-white" href="#colors">Colors</a>
+            </li>
+            <li class="nav-item col">
+              <a class="nav-link text-white" href="#display">Displays</a>
+            </li>
+            <li class="nav-item col">
+              <a class="nav-link text-white" href="#flex">Flex</a>
+            </li>
+            <li class="nav-item col">
+              <a class="nav-link text-white" href="#float">Float</a>
+            </li>
+            <li class="nav-item col">
+              <a href="#interaction" class="nav-link text-white"> Interactions</a>
+            </li>
+            <li class="nav-item col">
+              <a href="#overflow" class="nav-link text-white"> Overflow</a>
+            </li>
+            <li class="nav-item col">
+              <a href="#sizing" class="nav-link text-white">Sizing</a>
+            </li>
+            <li class="nav-item col">
+              <a href="#spacing" class="nav-link text-white">Spacing</a>
+            </li>
+            <li class="nav-item col">
+              <a href="#valign" class="nav-link text-white">Vertical Align</a>
+            </li>
+            <li class="nav-item col"><a href="../index.html" class="nav-link text-white"> Homepage</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-</header>
+    </nav>
   <br>
   <button onclick="topFunction()" id="myBtn" title="Go to top"><svg xmlns="http://www.w3.org/2000/svg" width="16"
       height="16" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16">
@@ -55,7 +64,7 @@
       <path fill-rule="evenodd"
         d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
     </svg></button>
-  <div id="background " class="p-3 m-0 border bd-example">
+  <div id="background" class="p-3 m-0 border bd-example">
     <h2 class="warning"> Background Colors</h2>
     <div class="p-3 mb-2 bg-primary text-white">primary</div>
     <div class="p-3 mb-2 bg-primary-subtle text-emphasis-primary">primary-subtle</div>
@@ -454,12 +463,79 @@
       consectetur adipisicing elit. Itaque sapiente fugiat vero ipsa dignissimos nisi nostrum id deserunt, iste totam
       suscipit, soluta, necessitatibus voluptatum sunt perspiciatis cumque quidem excepturi consequuntur.</div>
     <hr>
- <p> Its fairly similar for the y axis. </p>
+    <p> Its fairly similar for the y axis. </p>
   </div>
-  <div id="padding/margin" class="border bd-example text-white p-3">
-
-  </div> 
-   <script>
+  <br>
+  <div id="sizing" class="border bd-example text-white p-3">
+    <h3 class="text-warning"> Sizing</h3>
+    <div class="bd-example bd-example-flex">
+      <div class="p-3 w-25"> Width 25%</div>
+      <div class="p-3 w-50"> width 50%</div>
+      <div class="p-3 w-75"> width 75%</div>
+      <div class="p-3 w-100"> width 100%</div>
+      <div class="p-3 w-auto"> width Auto</div>
+    </div>
+    <div style="height: 100px;">
+      <div class="h-25 d-inline-block" style="width: 120px; background-color:  rgba(var(--bd-violet-rgb), 0.15)">Height
+        25%</div>
+      <div class="h-50 d-inline-block" style="width: 120px; background-color:  rgba(var(--bd-violet-rgb), 0.15)">Height
+        50%</div>
+      <div class="h-75 d-inline-block" style="width: 120px; background-color:  rgba(var(--bd-violet-rgb), 0.15)">Height
+        75%</div>
+      <div class="h-100 d-inline-block" style="width: 120px; background-color:  rgba(var(--bd-violet-rgb), 0.15)">Height
+        100%</div>
+      <div class="h-auto d-inline-block" style="width: 120px; background-color:  rgba(var(--bd-violet-rgb), 0.15)">
+        Height auto</div>
+    </div>
+    <hr>
+    <h5 class="text-warning"> Relative to viewport</h5>
+    <p> I cant show this the best, but you just use min-vh/vw, or just vh/hw</p>
+  </div>
+  <br>
+  <div id="spacing" class="border bd-example text-white p-3">
+    <h3 class="warning"> Spacing</h3>
+    <p> This goes {property}-{sides}-{size}, m for margin, p for padding; sides are: Top, Bottom, Start, End, x, or y;
+      the sizes go up to 5, and it has all the standard breakpoints which you would add before the size</p>
+      <div class="mx-auto" style="width: 200px;">
+      <p> Center using mx-auto and width:200px</p>
+    </div>
+    <hr>
+    <h5 class="text-warning"> Gaps
+      
+    </h5>
+    <div class="grid gap-3">
+      <div class="p-2 g-col-6" style="background-color:  rgba(var(--bd-violet-rgb), 0.15)">Grid gap-3 g-col-6</div>
+      <div class="p-2 g-col-6" style="background-color:  rgba(var(--bd-violet-rgb), 0.15)">Are the classes</div>
+      <div class="p-2 g-col-6" style="background-color:  rgba(var(--bd-violet-rgb), 0.15)">Being used</div>
+      <div class="p-2 g-col-6" style="background-color:  rgba(var(--bd-violet-rgb), 0.15)"> For this</div>
+    </div>
+    <br>
+    <div class="grid gap-0 row-gap-2">
+      <div class="p-2 g-col-6" style="background-color:  rgba(var(--bd-violet-rgb), 0.15)"> Row Gaps!</div>
+      <div class="p-2 g-col-6" style="background-color:  rgba(var(--bd-violet-rgb), 0.15)"> Row Gaps!</div>
+      <div class="p-2 g-col-6" style="background-color:  rgba(var(--bd-violet-rgb), 0.15)"> Row Gaps!</div>
+      <div class="p-2 g-col-6" style=" background-color:  rgba(var(--bd-violet-rgb), 0.15)"> Row Gaps!</div>
+    </div>
+    <br>
+    <div class="grid gap-o column-gap-2">
+      <div class="p-2 g-col-6" style=" background-color:  rgba(var(--bd-violet-rgb), 0.15)"> Column Gaps</div>
+      <div class="p-2 g-col-6" style=" background-color:  rgba(var(--bd-violet-rgb), 0.15)"> Column Gaps</div>
+      <div class="p-2 g-col-6" style="background-color:  rgba(var(--bd-violet-rgb), 0.15)"> Column Gaps</div>
+      <div class="p-2 g-col-6" style="background-color:  rgba(var(--bd-violet-rgb), 0.15)"> Column Gaps</div>
+    </div>
+  </div>
+  <br>
+  <div id="valign" class="border bd-example text-white p-3">
+<h3 class="warning">  Vertical Align</h3>
+<span class="align-baseline"> Baseline</span>
+<span class="align-top">Top</span>
+<span class="align-middle">Middle</span>
+<span class="align-bottom">Bottom</span>
+<span class="align-text-top"> Text Top</span>
+<span class="align-text-bottom"> Text Bottom</span>
+  </div>
+  <br>
+  <script>
     let mybutton = document.getElementById("myBtn");
 
     // When the user scrolls down 20px from the top of the document, show the button
