@@ -14,10 +14,14 @@
 <body class="bg-black">
 
   <!-- Example Code -->
+  <header class="">
     <nav class="navbar navbar-expand-lg p-n8">
       <div class="container-fluid sticky-top">
-        <div class="collapse navbar-collapse d-flex justify-content-between container row gx-5">
-          <ul class="navbar-nav">
+        <a class="navbar-brand px-5 py-3 align-items-end purple" href="../index.html"
+          alt="Back to Homepage">Bootstrap</a>
+
+        <div class="collapse navbar-collapse d-flex justify-content-between container">
+          <ul class="navbar-nav row">
             <li class="nav-item col">
               <a class="nav-link text-white" href="#background">Background</a>
             </li>
@@ -42,20 +46,23 @@
             <li class="nav-item col">
               <a href="#overflow" class="nav-link text-white"> Overflow</a>
             </li>
-            <li class="nav-item col">
-              <a href="#sizing" class="nav-link text-white">Sizing</a>
-            </li>
-            <li class="nav-item col">
-              <a href="#spacing" class="nav-link text-white">Spacing</a>
-            </li>
-            <li class="nav-item col">
-              <a href="#valign" class="nav-link text-white">Vertical Align</a>
-            </li>
-            <li class="nav-item col"><a href="../index.html" class="nav-link text-white"> Homepage</a></li>
+          <li class="nav-item col">  <div class="dropdown nav-link text-white">
+              <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+              </button>
+              <ul class="dropdown-menu">
+                 <li><a class="dropdown-item" href="#sizing">Sizing</a></li>
+                <li><a class="dropdown-item" href="#spacing">Spacing</a></li>
+                <li><a class="dropdown-item" href="#valign">Vertical Align</a></li>
+               
+              </li>
+              </ul>
+            </div>
           </ul>
         </div>
       </div>
     </nav>
+  </header>
   <br>
   <button onclick="topFunction()" id="myBtn" title="Go to top"><svg xmlns="http://www.w3.org/2000/svg" width="16"
       height="16" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16">
@@ -534,7 +541,6 @@
 <span class="align-text-top"> Text Top</span>
 <span class="align-text-bottom"> Text Bottom</span>
   </div>
-  <br>
   <script>
     let mybutton = document.getElementById("myBtn");
 
