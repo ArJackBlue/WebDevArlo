@@ -8,6 +8,8 @@ html {
     min-width: 480px;
     margin: 0 auto;
     background-color: rgb(55, 102, 104);
+    max-height: 700px;
+    overflow:hidden;
   }
   
   .randomNumGen{
@@ -38,4 +40,15 @@ html {
     height: 100px;
     width: 300px;
     align-content: center;
+  }
+
+  canvas {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    width: 700px;
+    height: 200px;
+  }
+  
+  #canvas{
+    color:white;
   }
