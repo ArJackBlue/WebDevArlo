@@ -1,0 +1,41 @@
+html {
+    font-family: sans-serif;
+  }
+
+  body {
+    width: 50%;
+    max-width: 800px;
+    min-width: 480px;
+    margin: 0 auto;
+    background-color: rgb(55, 102, 104);
+  }
+  
+  .randomNumGen{
+    padding: 20px;
+    min-height: 200px;
+    color:white;
+    text-align: center;
+  }
+  .form input[type="number"] {
+    width: 200px;
+  }
+
+ 
+  .resultParas{
+    border: 1px solid black;
+    margin-top: 10px;
+    color: white;
+    padding: 3px;
+    text-align: center;
+  }
+   .lastResult {
+    color: white;
+    padding: 3px;
+    align-items: center;
+
+  }
+  button{
+    height: 100px;
+    width: 300px;
+    align-content: center;
+  }
