@@ -177,7 +177,6 @@ function resetGame() {
     guessSubmit.disabled = false;
     guessField.value = '';
     guessField.focus();
-    canvas.
 
     lastResult.style.backgroundColor = '';
     randomNumber = Math.floor(Math.random() * 100) + 1;
