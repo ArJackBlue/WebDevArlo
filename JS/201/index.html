@@ -17,155 +17,58 @@
         margin: 0 auto;
       }
       
-      .randomNumGen{
-        border: 2px solid black;
-        padding: 20px;
-        min-height: 200px;
-        background-color: rgb(55, 102, 104);
-        color:white;
-        text-align: center;
-      }
-      .form input[type="number"] {
-        width: 200px;
-      }
-
-     
-      .resultParas{
-        border: 1px solid black;
-        margin-top: 10px;
-        color: white;
-        padding: 3px;
-        text-align: center;
-      }
-       .lastResult {
-        color: white;
-        padding: 3px;
-        align-items: center;
-
-      }
-      .resetButton{
-        height: 100px;
-        width: 300px;
-      }
     </style>
+    <script>
+      
+      // const person5 = {
+      //   'name': "Onyx",
+      //   speak() {
+      //       console.log(`My cats name is ${this.name}`);
+      //   }
+      // }
+      // person5.speak()
+
+      function counter(){
+        if(this.total === undefined){
+          this.total = 1
+        } else{
+          this.total++
+        }
+        console.log("Running counter. This is", this.total)
+      }
+      counter()
+      counter()
+      counter()
+
+      const myNewGreeting = (name) => 
+        console.log(`Welcome ${name}`)
+      
+      myNewGreeting("Eric Nord")
+      // This will really only work if it is one line, otherwise you need {}
+
+      class MyClassName {
+        setName(name){
+          this.name = name
+        }
+        
+        speak(){
+          console.log(`Class stuff, ${this,name}`)
+        }
+      }
+      const thing = new MyClassName()
+      thing.setName("Arlo")
+      thing.speak()
+
+      //If we don't set setName, it just comes back as undefined.
+    </script>
 </head>
 <body>
     <h2> Lots of console.log stuff!</h2>
 
     <br>
-    <br>
-   
-    <script>
-       
-          window.onload = function (){
-
-          }
-
-          
-
-          const num = 1234;
-          if (num === 1234) {
-              const greeting ="Hello!";
-          }
-
-         console.log(greeting)
-
-         var name2;
-         console.log("First", name2)
-         var name = "Arlo";
-         console.log("Second", name)
+    <p> I'm still kind of struggling to understand HOW exactly to use javascript in a website.</p>
 
 
-          let person1 = "Arlo J Jackson";
-
-         function greeting(){
-             console.log(`Hello ${person1}`)
-             var person2 = "Eric Nord";
-         }
-         greeting();
-         console.log(person2, "Is the second person");
-
-      
-    </script>
-    <script>
-        let randomNumber = Math.floor(Math.random() * 100) +1;
-        const guesses = document.querySelector('.guesses');
-        const lastResult = document.querySelector('.lastResult');
-        const lowOrHi = document.querySelector('.lowOrHi');
-        const guessSubmit = document.querySelector('.guessSubmit');
-        const guessField = document.querySelector('.guessField');
-        let guessCount = 1;
-        let resetButton;
-        guessField.focus();
-
-
-
-         function checkGuess(){
-            const userGuess = Number(guessField.value);
-            if (guessCount === 1){
-             guesses.textContent = 'Previous guesses: ';
-            }
-            guesses.textContent += userGuess + ' ' ;
-
-            if(userGuess === randomNumber){
-             lastResult.textContent = 'Congrats! Its right.';
-             lastResult.style.backgroundColor = 'green';
-             lowOrHi.textContent ='';
-                 setGameOver();
-             }
-             else if (guessCount === 10) {
-    lastResult.textContent = '!!!GAME OVER!!!';
-    lowOrHi.textContent = '';
-    setGameOver();
-  }
-   else{
-                 lastResult.textContent = 'Sorry! Wrong!';
-                 lastResult.style.backgroundColor='red';
-                 if (userGuess < randomNumber){
-                     lowOrHi.textContent= 'Guess is too low!';
-                 } else if(userGuess > randomNumber){
-                     lowOrHi.textContent = 'Guess is too high!';
-                 }
-             }
-             
-
-             guessCount++;
-             guessField.value ='';
-             guessField.focus(); 
-            
-         }
-         guessSubmit.addEventListener('click', checkGuess);
-
-            function setGameOver(){
-                guessField.disabled = true;
-                guessSubmit.disabled = true;
-
-                resetButton = document.createElement('button');
-                resetButton.textContent = 'Start New Game';
-                document.body.append(resetButton);
-                resetButton.addEventListener('click', resetGame);
-            }
-
-            function resetGame(){
-                guessCount = 1;
-
-                const resetParas = document.querySelectorAll('.resultParas p');
-      for (const resetPara of resetParas) {
-       resetPara.textContent = '';
-             }
-
-
-                resetButton.parentNode.removeChild(resetButton);
-
-                guessField.disabled = false;
-                guessSubmit.disabled = false;
-                guessField.value = '';
-                guessField.focus();
-
-                lastResult.style.backgroundColor='';
-                randomNumber = Math.floor(Math.random() *100)+1;
-            }
- </script>
     <script src="main.js"></script>
 </body>
 </html>
