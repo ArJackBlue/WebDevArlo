@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 201 Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body class="bg-dark">
+    <div class="text-center mt-5">
+    <button class="btnOne btn btn-outline-info btn-lg text-center mb-3"> More About Pokemon Species</button>
+    <div class="info text-center text-uppercase text-warning mb-3">
+   <div id="name" class="text-info fs-4"></div> 
+    <div id="color" class="fs-6"></div>
+    <div id="generation" class="fs-6"></div>
+    <div id="type" class="fs-6"></div>
+    </div>
+
+ 
+  <p class="text-white"> Link back to <a class="text-decoration-none text-reset" href="../../index.html">home </a> </p>  </div>
+    <script>
+        const name = document.getElementById("name");
+        const color = document.getElementById("color");
+        const generation = document.getElementById("generation");
+        const type = document.getElementById("type");
+
+        const button = document.querySelector(".btnOne");
+        button.addEventListener("click", (e) => {
+            e.preventDefault()
+            const randomNum = Math.ceil(Math.random() *1000 )
+    fetch(`https://pokeapi.co/api/v2/pokemon-species/${randomNum}`)
+        .then( response => response.json())
+        .then(character =>{
+            console.log(character)
+            name.innerHTML = character.name;
+            color.innerHTML = character.color.name;
+            type.innerHTML = character.egg_groups[0].name;
+            generation.innerHTML = character.generation.name;
+        })
+        })
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+</body>
+</html>
