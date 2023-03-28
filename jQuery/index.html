@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 101</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+        <style>
+            #box{
+                width:200px;
+                height:200px;
+                margin: 50px auto;
+
+            }
+            [name= 'myTextArea']{
+                
+                width:200px;
+                height:200px;
+                margin: auto 350px;
+            }
+            input{
+                margin-bottom: 50px;
+            }
+        </style>
+
+    </head>
+
+
+<body>
+
+    <h2> Custom Title</h2>
+
+
+
+    <button class="customClass">This is a custom button</button>
+    <p class="customClass">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem eveniet animi
+        perferendis harum obcaecati ad
+        eius eos modi quos. Saepe aperiam eius accusantium voluptas suscipit quam impedit. Veniam, voluptatem odit!</p>
+    <br>
+    <p id="customId">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dolore, quaerat harum ipsum numquam
+        perspiciatis
+        voluptatibus delectus minus voluptates corporis amet, vitae accusamus fugiat hic debitis corrupti deleniti
+        molestiae qui!</p>
+    <hr>
+
+    <div id="customTwo">
+
+    </div>
+    <div class="homework">
+
+    </div>
+    <hr>
+    <section class="changeText">
+        <p id="1">Put some HTML in here.</p>
+        <p id="2"></p>
+    </section>
+    <hr>
+    <input type="text" value="Hello World" id="changing">
+    <section class="sectionTwo">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis est magni repudiandae fugiat earum numquam
+        natus quas voluptate, odit veritatis obcaecati rerum nobis temporibus iste, minima ut non error nemo!
+    </section>
+    <hr>
+    <div>
+        <h3> Append and Prepending elements</h3>
+
+        <h6 class="prepend">This is prepend and append practice. </h6>
+
+    </div>
+    <hr>
+    <div id="target">
+        <h3>Boop</h3>
+    </div>
+    <hr>
+    <div id="deleting">
+        <p class="firstParagraph"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus harum nemo at quod placeat voluptas
+            voluptate sequi ex cum consectetur? Fugiat, doloremque. Suscipit nisi, ducimus culpa fugiat itaque beatae
+            qui.#1</p>
+
+        <p class="middleParagraph"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus harum nemo at quod placeat voluptas
+            voluptate sequi ex cum consectetur? Fugiat, doloremque. Suscipit nisi, ducimus culpa fugiat itaque beatae
+            qui.#2</p>
+
+        <p class="lastParagraph"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus harum nemo at quod placeat voluptas
+            voluptate sequi ex cum consectetur? Fugiat, doloremque. Suscipit nisi, ducimus culpa fugiat itaque beatae
+            qui.#3</p>
+    </div>
+    <hr>
+    <div class="parent">
+        <p class="childOne"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab laborum quasi laudantium, molestias hic asperiores maiores nam ea delectus illo praesentium repellendus eligendi fuga necessitatibus dicta, distinctio alias voluptatibus quo.</p>
+        <br>
+        <ul class="childTwo">
+            <li>A</li>
+            <li>b</li>
+            <li>c</li>
+        </ul>
+        <br>
+        <strong> Child Three</strong>
+    </div>
+    <hr>
+    <div class="eventListeners">
+        <button> Click Me</button>
+<div id="buttonHere">
+
+</div>
+    </div>
+    <hr>
+    <div class="bg-dark" id="box"></div>
+<div class="inputs">
+    <input type="text" class="selectMe">
+    <textarea name="myTextArea" id="" cols="30" rows="10"></textarea>
+</div>
+<div class="form">
+    <form action="">
+        <input type="text" name="name" placeholder="Your Name" id="here">
+        <button type="submit"> Submit</button>
+    </form>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () { //a lot like the document.querySelector
+            console.log("jQuery is loaded.");
+             $("h1").text("Changed Via jQuery");
+             $("p.customClass").text("Changed again 3");
+             $("#customId").text("Changed again 4");
+             $("#customTwo").html("<h2> Hello. </h2> <br> <span class='customClassTwo'>Span Class </span>");
+             $(".customClassTwo").text("CHANGED");
+             $(".homework").html(" <hr> <h3> Assigned </h3> <p id='homeworkP'> Something minor assigned to us. </p> <p class='homeworkP'> </p>");
+             $("#homeworkP").text("This is changed using selectors.");
+             $(".homeworkP").html("<br><p> jQuery is actually kinda simple.");
+             $("#1").text("<strong> This is using .text </strong> ");
+             $("#2 ").html("<p> <strong> This is using .html </strong> </p>");
+             $("input#changing").val("I am changing value.");
+             const text = $(".sectionTwo").text();
+             $("h6")
+                 .prepend("<strong> This is bold  try 2</strong>")
+                 .append("<strong> This is bolded  try 2</strong>");
+             $("div#target").before("<h3> Hello world. </h3>")
+                 .after("<p> This is a paragraph </p>");
+              $("div p.middleParagraph").remove();
+              $("div p.lastParagraph").text(" Well, this is different, the last paragraph was removed!");
+                 const $parent =$("div.parent");
+                 $parent.html("<p> Stuff in here </p>");
+
+            //      $("button").on("click", function(){
+            //          console.log("This is clickable.")
+            //      })
+                 
+                    // $(document).on("click", "button", function(){
+                    //     console.log("3333333");
+                    // })
+                    // const $parentTwo = $("#buttonHere");
+                    // $parent.html("<button> Click Me, Dynamic Button </button>");
+                    
+                    $("#box").on("mouseenter", function(){
+                        console.log("Your mouse is here.")
+                    })
+                    .on("mouseleave", function(){
+                        console.log("you left the box.")
+                    })
+                    $(".selectMe").on("keyup", function(){
+                        console.log($(this).val());
+                        
+                    })
+                    $("[name='myTextArea']").on("focus", function(){
+                        console.log("You focused into the text area.")
+                    })
+                    $("[name='myTextArea']").on("blur", function(){
+                        console.log($(this).val())
+                    })
+                    //You can use this mainly on phones, so the keyboard will pop up when you focus on something.
+
+                    $("form").on("submit", function(){
+                        event.preventDefault()
+                        $("#here").val("Form was not submitted.")
+                    })
+
+            console.log(text);
+        });
+
+//You can use just CSS Selectors as well. 
+
+
+
+
+
+    </script>
+</body>
+
+</html>

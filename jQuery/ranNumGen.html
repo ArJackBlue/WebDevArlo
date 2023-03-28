@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="randomNumGen">
+        <h3> Guess the Number!
+        </h3>
+        <p> You get 10 guesses! #'s are between 1 and 100.</p>
+        <label for="guessField">Enter a guess: </label>
+        <input type="number" id="guessField" class="guessField" />
+        <input type="submit" value="Submit guess" class="guessSubmit" />
+
+        <div class="resultParas">
+            <p class="guesses"></p>
+            <p class="lastResult"></p>
+            <p class="lowOrHi"></p>
+        </div>
+    </div>
+    <canvas id="canvas"></canvas>
+    <p id="canvas"> to get rid of confetti: refresh page. If you could let me know how to get rid of it, ill send over
+        the code!</p>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            let randomNumber = Math.floor(Math.random() * 100) + 1;
+            const guesses = document.querySelector('.guesses');
+            const lastResult = document.querySelector('.lastResult');
+            const lowOrHi = document.querySelector('.lowOrHi');
+            const guessSubmit = document.querySelector('.guessSubmit');
+            const guessField = document.querySelector('.guessField');
+            let guessCount = 1;
+            let resetButton;
+            $("guessField").focus();
+
+            $("checkGuess")
+                    const userGuess = Number(guessField.value);
+                    if (guessCount === 1){
+                        $("guesses").text("Previous Guesses: ");
+                    }
+                    if (userGuess=== randomNumber){
+                        $("lastResult")
+                        .text("Congrats! Its Right!")
+                        .backgroundColor('green');
+                        $("lowOrHi").text(' ');
+                    }
+                    else if(guessCount ===10 ){
+                        $("lastResult").text("!!! GAME OVER!!!");
+                        $("lowOrHi").text(' ');
+                        setGameOver();
+                    }
+                    else{
+                        $("lastReslt")
+                            .text('Sorry! Wrong!')
+                            .backgroundColor('red');
+                        if (userGuess< randomNumber){
+                            $("lowOrHi").text('Guess is too low!');
+                        }
+                        if (userGuess> randomNumber){
+                            $("lowOrHi").text('Guess it too High!');
+                        }
+                    }
+                    $("guessCount")++;
+                    $("guessField")
+                        .val(' ')
+                        .focus();
+                        ;
+
+        })</script>
+</body>
+
+</html>
