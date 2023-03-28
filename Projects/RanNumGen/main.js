@@ -180,4 +180,5 @@ function resetGame() {
 
     lastResult.style.backgroundColor = '';
     randomNumber = Math.floor(Math.random() * 100) + 1;
+    document.getElementById("canvas").style.display="none";
 }

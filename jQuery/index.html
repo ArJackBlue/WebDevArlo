@@ -16,6 +16,9 @@
                 margin: 50px auto;
 
             }
+            #clickMe{
+                margin: auto 350px;
+            }
             [name= 'myTextArea']{
                 
                 width:200px;
@@ -109,7 +112,10 @@
 </div>
     </div>
     <hr>
+    <div class="hiding">
     <div class="bg-dark" id="box"></div>
+    <button id="clickMe"> Hide the box</button>
+</div>
 <div class="inputs">
     <input type="text" class="selectMe">
     <textarea name="myTextArea" id="" cols="30" rows="10"></textarea>
@@ -163,6 +169,11 @@
                     .on("mouseleave", function(){
                         console.log("you left the box.")
                     })
+                    $("#clickMe").on("click", function(e){
+                        e.preventDefault()
+                        $("#box").hide();
+                    })
+
                     $(".selectMe").on("keyup", function(){
                         console.log($(this).val());
                         
