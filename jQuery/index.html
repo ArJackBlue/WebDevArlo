@@ -28,6 +28,31 @@
             input{
                 margin-bottom: 50px;
             }
+            .boxy{
+                width: 100px;
+                height: 100px;
+            }
+            .thisBlueBox{
+                background-color: blue;
+                width:100px;
+                height:100px;
+            }
+            .blueBox{
+                background-color: blue;
+                width:100px;
+                height:100px;
+            }
+            .redBox{
+                background-color: red;
+                width:100px;
+                height:100px;
+            }
+            .purpleBox{
+                background-color: blueviolet;
+            }
+            .width100{
+                width:100%;
+            }
         </style>
 
     </head>
@@ -126,6 +151,25 @@
         <button type="submit"> Submit</button>
     </form>
 </div>
+<div class="cssClasses">
+    <div class="thisBlueBox float-start"></div>
+<div class="redBox float-end"></div>
+<button class="btn float-center border border-2">Click me</button>
+    <p> This button turns any red box,into purple.</p>
+    <hr>
+    <br>
+    <br>
+    <button class="removeBlue"> Remove the Blue</button>
+    <button class="removeWidth"> Remove the width</button>
+    <button class="toggleBlue"> Toggle The blue</button>
+    <div class="blueBox width100 boxy"> </div>
+   <hr>
+   <br>
+   <br>
+   <div class="cssChange"></div>
+
+    
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
     <script>
@@ -189,17 +233,46 @@
                     $("form").on("submit", function(){
                         event.preventDefault()
                         $("#here").val("Form was not submitted.")
+                    });
+                    setTimeout(() => {
+                        $(".thisBlueBox").addClass("redBox")
+                    }, 10000);
+                    $(".btn").on("click", () => {
+                        $(".redBox").addClass("purpleBox")
+                    });
+
+                    const $box = $(".boxy");
+                    const $removeBlue = $(".removeBlue")
+                    const $removeWidth = $(".removeWidth")
+
+                    $removeBlue.on("click", function() {
+                        $box.removeClass("blueBox");
+                        $box.addClass("redBox")
                     })
+                    $removeWidth.on("click", () =>{
+                        $box.toggleClass("width100");
+                    })
+                    $(".toggleBlue").on("click", ()=>
+                    {
+                        $box.toggleClass("blueBox");
+                        
+                    });
+
+                    $(".cssChange")
+                        // .css("background-color", "green")
+                        // .css("border", "black solid 5px")
+                        // .css("height", "100px")
+                        // .css("width", "100px")
+                        .css({
+                            backgroundColor:"green",
+                            border: "5px solid black",
+                            borderRadius: "15px",
+                            height:"100px",
+                            width:"100px",
+                        })
 
             console.log(text);
         });
-
-//You can use just CSS Selectors as well. 
-
-
-
-
-
     </script>
 </body>
 
