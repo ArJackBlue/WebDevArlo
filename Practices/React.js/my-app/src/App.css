@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  color:yellow;
 }
 
 .App-logo {
@@ -21,11 +22,13 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: yellow;
 }
 
 .App-link {
-  color: #61dafb;
+  color: yellow;
+  text-decoration:none;
+  cursor: pointer;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +38,21 @@
   to {
     transform: rotate(360deg);
   }
+}
+.pointer{
+  cursor:pointer;
+}
+.btn{
+  width:150px;
+  height:50px;
+  background-color: #282c34;
+  border: solid 1px yellow;
+  color:yellow;
+  font-size: 25px;
+  cursor:pointer;
+}
+.link{
+  text-decoration: none;
+  color:yellow;
+  cursor: pointer;
 }
