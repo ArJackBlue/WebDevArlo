@@ -56,3 +56,7 @@
   color:yellow;
   cursor: pointer;
 }
+.list{
+  text-decoration: none;
+  list-style: none;
+}

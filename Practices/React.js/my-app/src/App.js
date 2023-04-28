@@ -5,7 +5,7 @@ import './App.css';
 class FilmItemRow extends React.Component{
   render(){
     return(
-      <li> <a href={this.props.url} className='link'> {this.props.url}</a>
+      <li> {this.props.url}
       </li>
     )
   }
@@ -15,6 +15,7 @@ class StarWars extends React.Component{
   constructor(){
     super()
     this.state = {
+      image: null,
       name: null,
       height: null,
       homeworld: null,
@@ -24,16 +25,17 @@ class StarWars extends React.Component{
 
   }
   getNewCharacter() {
-    const randomNumber = Math.round(Math.random() * 82)
-    const api = `https://swapi.dev/api/people/${randomNumber}/`
+    const randomNumber = Math.round(Math.random() * 88)
+    const api = `https://akabab.github.io/starwars-api/api/id/${randomNumber}.json`
     fetch(api)
       .then(response => response.json())
       .then(data =>{
     this.setState({
+      image: data.image,
       name: data.name,
       height: data.height,
       homeworld: data.homeworld,
-      films: data.films,
+      films: data.affiliations,
       loadedCharacter:true
     })
   })
@@ -48,10 +50,11 @@ class StarWars extends React.Component{
       {
         this.state.loadedCharacter &&
         <div> 
+          <img src={this.state.image} width='25%'></img>
         <h1> {this.state.name}</h1>
-      <p> {this.state.height} cm</p>
-      <p><a className='link' href={this.state.homeworld}> Homeworld: </a></p>
-      <ul>
+      <p> {this.state.height} m</p>
+    <p> Homeworld: {this.state.homeworld}</p>
+      <ul className='list'>
         {movies}
       </ul>
           </div>
